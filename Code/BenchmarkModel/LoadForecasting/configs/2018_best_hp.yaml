@@ -1,0 +1,13 @@
+data:
+  year: ['2018']
+
+model_params:
+  max_encoder: [24]
+  max_pred: [12]
+  hidden_state_size: [60]
+  num_layers: [4]
+  drop_out: [0.3]
+
+training_params:
+  batch_size: [128]
+  max_epochs: [30]

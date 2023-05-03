@@ -1,0 +1,29 @@
+data:
+  year: ['2020']
+
+model_params:
+  max_encoder: [24, 48]
+  max_pred: [12, 24]
+  hidden_state_size: [10, 30, 60]
+  num_layers: [2, 4, 8]
+  drop_out: [0.1, 0.3]
+
+training_params:
+  batch_size: [64, 128]
+  max_epochs: [30]
+
+
+
+#   data:
+#   year: ['2018', '2019', 2020']
+
+# model_params:
+#   max_encoder: [24, 48, 96]
+#   max_pred: [12, 24]
+#   hidden_state_size: [10, 30, 60]
+#   num_layers: [2, 4, 8]
+#   drop_out: [0.1, 0.3]
+
+# training_params:
+#   batch_size: [64, 128]
+#   max_epochs: [30]

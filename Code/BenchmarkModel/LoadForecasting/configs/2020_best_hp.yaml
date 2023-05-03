@@ -1,0 +1,13 @@
+data:
+  year: ['2020']
+
+model_params:
+  max_encoder: [48]
+  max_pred: [12]
+  hidden_state_size: [60]
+  num_layers: [2]
+  drop_out: [0.1]
+
+training_params:
+  batch_size: [128]
+  max_epochs: [30]
