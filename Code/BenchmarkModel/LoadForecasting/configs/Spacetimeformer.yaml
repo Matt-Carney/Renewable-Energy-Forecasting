@@ -1,0 +1,46 @@
+model_params:
+  model_name: "Spacetimeformer" # ['RNN', 'GRU', 'LSTM']
+  context_points: 120
+  target_points: 60
+  d_model: 5
+  d_ff: 20
+  n_heads: 2
+  layers: [3]
+  blocks: [2]
+  dilation_channels: [32]
+  residual_channels: [32]
+  skip_channels: [1024]
+  end_channels: [512]
+  kernel_size: [2]
+
+exp_params:
+  variate: ["uni"] #['uni', 'multi']
+
+  sliding_window: [1]
+  selection_metric: "RMSE" # one of ['RMSE', 'MAE', 'MAPE']
+
+  train_valid_ratio: 0.8
+
+  test_flag: True
+  last_version: 126
+  external_features: ["yw_t", "ys_t"]
+  # DNNs
+  batch_size: [180] #[50, 100, 150]
+  learning_rate: [0.01] #[0.1, 0.01, 0.001]
+  num_workers: 0
+  normalization: ["minmax"] # ['none', 'minmax', 'standard']
+
+  weight_decay: 0.2
+
+  prediction_interval: 0.95
+
+  data_folder: "../../../PSML/processed_dataset/forecasting"
+
+trainer_params:
+  max_epochs: 20 # NOTE: by default it's 50
+  gpus: [0]
+
+logging_params:
+  save_dir: "./../logs"
+  name: "Spacetime"
+  manual_seed: 0
